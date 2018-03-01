@@ -11,7 +11,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     title: 'FEATURES',
     group: true,
   },
- /** {
+  {
     title: 'Store',
     icon: 'nb-coffee-maker',
     children: [
@@ -20,7 +20,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/store/store-table',
       },
     ],
-  },*/
+  },
   {
     title: 'Auth',
     icon: 'nb-locked',
