@@ -86,12 +86,12 @@ export class StoreTableComponent implements OnInit{
                 });
               });
 
-             /* this.source.onUpdated().subscribe((productData :ProductData)=>{
+              this.source.onUpdated().subscribe((productData :ProductData)=>{
                 
                         this._apiService.updateProduct(productData).subscribe((apiresponse: APIData)=>{
                           console.log(apiresponse);
                         });
-                      });*/
+                      });
         
     }
 

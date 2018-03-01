@@ -36,7 +36,7 @@ createProduct(productdata: ProductData): Observable<APIData>{
   deleteProduct(productdata: ProductData): Observable<APIData>{
     return this.http.delete<ProductData>('http://localhost:3000/api/'+ 'product/deleteProduct/' + productdata._id).catch(this.errorHandler);
    }
-  /* updateProduct(productdata: ProductData): Observable<APIData>{
+   updateProduct(productdata: ProductData): Observable<APIData>{
     return this.http.patch<ProductData>('http://localhost:3000/api/'+ 'product/updateProduct/' + productdata._id, productdata).catch(this.errorHandler);
-   }*/
+   }
 }
