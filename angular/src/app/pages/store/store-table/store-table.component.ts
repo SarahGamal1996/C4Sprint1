@@ -79,7 +79,7 @@ export class StoreTableComponent implements OnInit{
         console.log(apiresponse.data[0]);
         this.source.load( apiresponse.data);
       });
-     /* this.source.onRemoved().subscribe((productData :ProductData)=>{
+      this.source.onRemoved().subscribe((productData :ProductData)=>{
         
                 this._apiService.deleteProduct(productData).subscribe((apiresponse: APIData)=>{
                   console.log(apiresponse);
