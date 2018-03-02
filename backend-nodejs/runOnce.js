@@ -39,5 +39,10 @@ MongoClient.connect(url, function(err, db) {
     }
     console.log("Collection: "+collectionsObj[i].name+" created !");
   }
+  dbo.createCollection(collectionsObj[i].name , function(err, res){
+    if(err) throw err;
+    done = true;
+  });
+
   console.log("Press Control C");
 }); 
