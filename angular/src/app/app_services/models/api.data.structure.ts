@@ -16,5 +16,5 @@ export interface ProductData {
     price: Number; 
     createdAt: String; 
     updatedAt: String;
-    sellerName:  String;
+    seller:  String;
 }

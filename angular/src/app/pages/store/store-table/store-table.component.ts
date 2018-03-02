@@ -58,6 +58,8 @@ export class StoreTableComponent implements OnInit{
       seller: {
         title: 'Seller',
         type: 'String',
+        editable: false,
+        addable: false,
       },
     },
   };
@@ -66,7 +68,7 @@ export class StoreTableComponent implements OnInit{
 
     constructor(private _apiService: APIService) {
       this.source.onAdded().subscribe((productData :ProductData)=>{
-
+        productData.seller = localStorage.getItem('currentUser');
         this._apiService.createProduct(productData).subscribe((apiresponse: APIData)=>{
           console.log(apiresponse);
         });
@@ -86,7 +88,7 @@ export class StoreTableComponent implements OnInit{
                 });
               });
 
-              this.source.onUpdated().subscribe((productData :ProductData)=>{
+      this.source.onUpdated().subscribe((productData :ProductData)=>{
                 
                         this._apiService.updateProduct(productData).subscribe((apiresponse: APIData)=>{
                           console.log(apiresponse);

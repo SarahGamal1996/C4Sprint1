@@ -11,11 +11,11 @@ var productSchema = mongoose.Schema({
     required: true,
     min: 0
   },
-  //seller_name: {
-    //type: String,
+  seller: {
+    type: String,
     //required: false,
     //trim: true
- // },
+ },
   createdAt: {
     type: Date,
     default: Date.now
